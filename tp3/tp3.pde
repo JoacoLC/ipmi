@@ -46,7 +46,5 @@ void mousePressed() {
 }
 
 void keyPressed() {
-  if (keyCode == RETURN || keyCode == ENTER) {
-      init(rot_og);
-  }
+  if (keyCode == RETURN || keyCode == ENTER) init(rot_og);
 }
