@@ -6,10 +6,10 @@
 
 PFont       fnt;
 
-String      txt_char;
-String      txt_str       = "";
+String      txt_completo;
+String      txt_actual    = "";
 int         txt_indice    = 0;
-final byte  txtiempo_max  = 1;
+final int   txtiempo_max  = 1;
 int         txt_tiempo    = txtiempo_max;
 boolean     txt_pausado   = false;
 
@@ -48,8 +48,8 @@ void reset_cajatxt(){
 }
 
 void txt_gradual(){ // Hace aparecer caracteres de texto uno por uno.
-  if (txt_tiempo < 0 && txt_indice < txt_char.length()) {
-    txt_str += txt_char.charAt(txt_indice);
+  if (txt_tiempo < 0 && txt_indice < txt_completo.length()) {
+    txt_actual += txt_completo.charAt(txt_indice);
     txt_tiempo = txtiempo_max;
     txt_indice++;
     txt_pausado = false; // En caso de que se haya hecho una pausa en el último
@@ -65,5 +65,5 @@ void txt_pausa(int adonde, int cuanto){ // Esta es bastante intuitiva, creo. :P
 }
 
 void pausa_y_avance() {
-  if (txt_indice == txt_char.length()) timer_escena--;
+  if (txt_indice == txt_completo.length()) timer_escena--;
 }
