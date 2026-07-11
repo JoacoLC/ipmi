@@ -36,8 +36,9 @@
 // que son prácticamente iguales. Podría simplemente haber chequeado "timer_escena" dentro de una misma escena.
 // Escena escena escena.
 // 
-// No me queda mucho tiempo ya igual, y quiero dar por terminado este trabajo. Tengo el
-// bocho quemado por la lucha incesante contra mi disfunción ejecutiva y sus intentos de frenarme.
+// No estoy seguro de si el tono de la presentación es adecuado para un entorno académico. Es bastante ácido
+// y satírico. La idea era hacer una burla a la gente que ve al personaje de L como alguien absolutamente bueno
+// o heroico, pero por ahí lo considerás de mal gusto.
 //
 // ¡Espero que te guste!
 //
