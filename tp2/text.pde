@@ -6,11 +6,11 @@
 
 PFont       fnt;
 
-char[]      txt_char;
+String      txt_char;
 String      txt_str       = "";
-short       txt_indice    = 0;
+int         txt_indice    = 0;
 final byte  txtiempo_max  = 1;
-byte        txt_tiempo    = txtiempo_max;
+int         txt_tiempo    = txtiempo_max;
 boolean     txt_pausado   = false;
 
 float       cajatxt_w     = 8;
@@ -48,8 +48,8 @@ void reset_cajatxt(){
 }
 
 void txt_gradual(){ // Hace aparecer caracteres de texto uno por uno.
-  if (txt_tiempo < 0 && txt_indice < txt_char.length) {
-    txt_str += txt_char[txt_indice];
+  if (txt_tiempo < 0 && txt_indice < txt_char.length()) {
+    txt_str += txt_char.charAt(txt_indice);
     txt_tiempo = txtiempo_max;
     txt_indice++;
     txt_pausado = false; // En caso de que se haya hecho una pausa en el último
@@ -57,7 +57,7 @@ void txt_gradual(){ // Hace aparecer caracteres de texto uno por uno.
   } else txt_tiempo--;
 }
 
-void txt_pausa(short adonde, byte cuanto){ // Esta es bastante intuitiva, creo. :P
+void txt_pausa(int adonde, int cuanto){ // Esta es bastante intuitiva, creo. :P
   if (!txt_pausado && txt_indice == adonde) {
     txt_tiempo   = cuanto;
     txt_pausado  = true;
@@ -65,5 +65,5 @@ void txt_pausa(short adonde, byte cuanto){ // Esta es bastante intuitiva, creo. 
 }
 
 void pausa_y_avance() {
-  if (txt_indice == txt_char.length) timer_escena--;
+  if (txt_indice == txt_char.length()) timer_escena--;
 }
